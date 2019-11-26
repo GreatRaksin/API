@@ -18,7 +18,7 @@ while conv.startswith('д') or conv.startswith('l'):
 
     c = CurrencyConverter()
 
-    print('%.2f' % c.convert(amount, first, second))
+    print(Style.BRIGHT + Fore.LIGHTCYAN_EX + '%.2f' % c.convert(amount, first, second) + Style.RESET_ALL)
     conv = input(Fore.BLUE + 'Хотите еще раз конвертировать валюту? (да или нет) ' + Style.RESET_ALL).lower()
 
-print('Хорошего дня!')
+print(Style.BRIGHT + Fore.LIGHTCYAN_EX + 'Хорошего дня!')
