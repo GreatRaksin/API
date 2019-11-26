@@ -1,5 +1,6 @@
-from colorama import init, Fore, Back, Style
-from google_currency import convert
+from colorama import init, Fore, Style
+from currency_converter import CurrencyConverter
+
 init()
 
 conv = input(Fore.BLUE + 'Хотите конвертировать валюту? (да или нет) ' + Style.RESET_ALL).lower()
@@ -15,7 +16,9 @@ while conv.startswith('д') or conv.startswith('l'):
     first = input(Fore.LIGHTYELLOW_EX + 'Из какой валюты будем переводить? ').upper()
     second = input('В какую валюту будем переводить? ' + Style.RESET_ALL).upper()
 
-    result = convert(first, second, amount)
-    print(Fore.GREEN + result)
+    c = CurrencyConverter()
 
+    print('%.2f' % c.convert(amount, first, second))
+    conv = input(Fore.BLUE + 'Хотите еще раз конвертировать валюту? (да или нет) ' + Style.RESET_ALL).lower()
 
+print('Хорошего дня!')
