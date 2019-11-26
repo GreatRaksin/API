@@ -15,6 +15,6 @@ while conv.startswith('д') or conv.startswith('l'):
     first = input('Из какой валюты будем переводить? ').upper()
     second = input('В какую валюту будем переводить? ').upper()
 
-    print(convert(first,second, amount))
+    print(convert(first, second, amount))
 
 
