@@ -5,7 +5,7 @@ init()
 
 conv = input(Fore.BLUE + 'Хотите конвертировать валюту? (да или нет) ' + Style.RESET_ALL).lower()
 
-while conv.startswith('д') or conv.startswith('l'):
+while conv.startswith(('д', 'l', 'd')):
     amount = input(Fore.BLUE + 'Сколько денег будем переводить? ' + Style.RESET_ALL)
     try:
         amount = float(amount)
